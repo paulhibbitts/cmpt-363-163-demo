@@ -1,0 +1,36 @@
+{% embed 'partials/base.html.twig' %}
+
+  {% block content %}
+
+    <div class="container">
+      <div class="row">
+        {# check content display flag - hibbittsdesign.org #}
+        {% if not grav.uri.param('onlydisplaypagecontent') %}
+          <div class="col-sm-8 blog-main">
+        {% else %}
+          <div class="col-sm-12 blog-main">
+        {%endif%}
+
+        {% if not page.header.hidepagetitle %}
+        <h3>{{page.title}}</h3>
+        {% endif %}
+        {% set collection = page.collection() %}
+        {% for child in collection %}
+          <div class="schedulelist">
+            <p>
+          <strong>{{ child.header.scheduledescription }}</strong>
+          {% for scheduleitem in child.header.scheduleitems %}
+            {{scheduleitem.text|markdown}}
+          {% endfor %}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-sm-4 blog-sidebar">
+      {% include 'partials/sidebar.html.twig' with {'blog':page} %}
+    </div>
+    </div>
+</div>
+	{% endblock %}
+
+{% endembed %}

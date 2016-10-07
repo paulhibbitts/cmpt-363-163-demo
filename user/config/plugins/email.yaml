@@ -1,0 +1,15 @@
+enabled: true
+from: paul@hibbittsdesign.org
+to: paul@hibbittsdesign.org
+mailer:
+  engine: mail
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+    user: paulhibbitts
+    password: rh0vfanaG!
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: false

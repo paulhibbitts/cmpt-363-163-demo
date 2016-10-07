@@ -1,0 +1,23 @@
+title: CMPT-363
+metadata:
+    description: 'The course hub for the Fall 2016 offering of SFU CMPT 363 (User Interface Design)'
+displaymenuentries:
+    enabled: false         # display of additional menu entries
+menu:                     # menu entry for adding external sites/tools
+    - text: Grav
+      icon: arrow-circle-right
+      url: http://getgrav.org/
+icon:                     # default font awesome icons for preparation and post entries
+    post: calendar-o
+github:
+    location: menu         # menu | page | none
+    icon: gitlab
+    tree: https://csil-git1.cs.surrey.sfu.ca/paulh/cmpt-363-163/edit/master/
+twittertimeline:
+    enabled: false         # display of Twitter timeline on sidebar
+    url: https://twitter.com/hibbittsdesign/lists/cmpt-363-163
+    text: A Twitter List by hibbittsdesign
+    height: 600
+hidehomemenulink: true   # suppress Home menu link
+
+chat: RocketChat # RocketChat | Olark | None
