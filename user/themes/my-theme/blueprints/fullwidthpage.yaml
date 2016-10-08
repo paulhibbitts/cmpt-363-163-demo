@@ -1,4 +1,4 @@
-title: Course Hub
+title: Course Hub Options
 '@extends':
     type: default
     context: blueprints://pages
@@ -10,9 +10,8 @@ form:
       active: 1
 
       fields:
-        coursehuboptions:
+        options:
           type: tab
-          title: Course Hub
 
           fields:
 
@@ -23,7 +22,7 @@ form:
 
             header.hidepagetitle:
                 type: toggle
-                label: Display Page Title
+                label: Display Title at top of Page
                 help: Determines if the page title is displayed at the top of a page
                 default: 0
                 highlight: 0

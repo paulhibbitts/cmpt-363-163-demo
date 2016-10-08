@@ -28,12 +28,12 @@ form:
 
             coursehub2:
                 type: section
-                title: Display of Item in Blog List
+                title: Blog List Item Options
                 underline: true
 
             header.hidefrompostlist:
                 type: toggle
-                label: Include within List
+                label: Display this Item in Blog List
                 help: Determines if this page (i.e. post) will appear in the blog index
                 default: 0
                 highlight: 0
@@ -45,7 +45,7 @@ form:
 
             header.continue_link:
                 type: toggle
-                label: Include 'View all of...' Link
+                label: Include 'View all of...' Blog Item Link
                 help: Determines if a 'View all of...' link is displayed for items listed in the blog index
                 default: 1
                 highlight: 1

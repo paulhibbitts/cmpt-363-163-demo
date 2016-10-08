@@ -10,9 +10,8 @@ form:
       active: 1
 
       fields:
-        coursehuboptions:
+        options:
           type: tab
-          title: Course Hub
 
           fields:
 
