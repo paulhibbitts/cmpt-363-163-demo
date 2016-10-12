@@ -16,4 +16,4 @@ published: true
 ##### Upcoming Assignment
 [User Research and Usability Benchmarks](https://canvas.sfu.ca/courses/28233/assignments/175639)
 
-Did you attend this class? [Share your one-minute summary](https://canvas.sfu.ca/courses/28233/assignments/175631) before midnight, the day of class.
+Did you attend this class? [Share your one-minute summary](https://canvas.sfu.ca/courses/28233/assignments/175631) before midnight, the day of class. 
