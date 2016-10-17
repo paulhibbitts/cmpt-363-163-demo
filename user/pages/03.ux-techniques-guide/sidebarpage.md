@@ -1,6 +1,6 @@
 ---
 title: 'UX Techniques Guide'
-githublink: https://csil-git1.cs.surrey.sfu.ca/paulh/cmpt-363-163/tree/master/pages/03.ux-techniques-guide
+githublink: https://github.com/paulhibbitts/cmpt-363-163-demo/tree/master/user/pages/03.ux-techniques-guide
 ---
 
 <section id="accordion" style="text-align:right">

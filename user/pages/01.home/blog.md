@@ -2,7 +2,7 @@
 title: Home
 blog_url: blog
 body_classes: header-image fullwidth
-githublink: https://csil-git1.cs.surrey.sfu.ca/paulh/cmpt-363-163/tree/master/pages/01.home
+githublink: https://github.com/paulhibbitts/cmpt-363-163-demo/tree/master/user/pages/01.home
 
 sitemap:
     changefreq: monthly

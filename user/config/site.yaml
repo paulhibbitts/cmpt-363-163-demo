@@ -11,8 +11,8 @@ icon:                     # default font awesome icons for preparation and post 
     post: calendar-o
 github:
     location: menu         # menu | page | none
-    icon: gitlab
-    tree: https://csil-git1.cs.surrey.sfu.ca/paulh/cmpt-363-163/edit/master/
+    icon: github
+    tree: https://github.com/paulhibbitts/cmpt-363-163-demo/edit/master/user/
 twittertimeline:
     enabled: false         # display of Twitter timeline on sidebar
     url: https://twitter.com/hibbittsdesign/lists/cmpt-363-163
