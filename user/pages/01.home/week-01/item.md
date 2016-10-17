@@ -3,19 +3,6 @@ title: 'Week 1 (Sep 6 - 12)'
 date: 09/06/2016
 published: true
 hidefrompostlist: false
-scheduleicon: calendar
-scheduledescription: What is usability and user experience design?
-scheduleitems:
-    - icon: file-o
-      text: 'Create [team project group](https://canvas.sfu.ca/courses/28233/users) by Sep 12th'   
-    - icon: pencil
-      text: '[UX Topic Summary](https://canvas.sfu.ca/courses/28233/assignments/175640) assignment due Nov 7th'  
-    - icon: desktop
-      text: '[Course Overview](https://swipe.to/4564q)'   
-    - icon: desktop
-      text: '[Introduction to UX Design](https://swipe.to/4767w)'
-    - icon: book
-      text: '[Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/)'  
 ---
 
 ##### Summaries and Questions  
