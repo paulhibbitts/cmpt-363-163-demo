@@ -115,23 +115,25 @@ class Response
         // SSL Verify Peer and Proxy Setting
         $settings = [
             'method'      => $config->get('system.gpm.method', self::$method),
-            'verify_peer' => $config->get('system.gpm.verify_peer'),
+            'verify_peer' => $config->get('system.gpm.verify_peer', true),
             // `system.proxy_url` is for fallback
             // introduced with 1.1.0-beta.1 probably safe to remove at some point
             'proxy_url'   => $config->get('system.gpm.proxy_url', $config->get('system.proxy_url', false)),
         ];
 
-        $overrides = array_replace_recursive([], $overrides, [
-            'curl' => [
-                CURLOPT_SSL_VERIFYPEER => $settings['verify_peer']
-            ],
-            'fopen' => [
-                'ssl' => [
-                    'verify_peer' => $settings['verify_peer'],
-                    'verify_peer_name' => $settings['verify_peer'],
+        if (!$settings['verify_peer']) {
+            $overrides = array_replace_recursive([], $overrides, [
+                'curl' => [
+                    CURLOPT_SSL_VERIFYPEER => $settings['verify_peer']
+                ],
+                'fopen' => [
+                    'ssl' => [
+                        'verify_peer' => $settings['verify_peer'],
+                        'verify_peer_name' => $settings['verify_peer'],
+                    ]
                 ]
-            ]
-        ]);
+            ]);
+        }
 
         // Proxy Setting
         if ($settings['proxy_url']) {
@@ -262,13 +264,18 @@ class Response
             $options['fopen']['notification'] = ['self', 'progress'];
         }
 
-        $ssl = $options['fopen']['ssl'];
-        unset($options['fopen']['ssl']);
+        if (isset($options['fopen']['ssl'])) {
+            $ssl = $options['fopen']['ssl'];
+            unset($options['fopen']['ssl']);
 
-        $stream  = stream_context_create([
-            'http' => $options['fopen'],
-            'ssl' => $ssl
-        ], $options['fopen']);
+            $stream  = stream_context_create([
+                'http' => $options['fopen'],
+                'ssl' => $ssl
+            ], $options['fopen']);
+        } else {
+            $stream  = stream_context_create(['http' => $options['fopen']], $options['fopen']);
+        }
+
 
         $content = @file_get_contents($uri, false, $stream);
 
